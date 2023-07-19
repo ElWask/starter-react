@@ -1,8 +1,18 @@
 import { render, screen } from '@testing-library/react';
+import fetchMock from 'jest-fetch-mock';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  beforeAll(() => {
+    fetchMock.enableMocks();
+  });
+
+  afterEach(() => {
+    fetchMock.resetMocks();
+  });
+
+  it('renders learn react link', () => {
+    render(<App />);
+    expect(screen.getByText(/hello IG/i)).toBeInTheDocument();
+  });
 });
