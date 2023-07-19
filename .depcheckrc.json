@@ -1,0 +1,15 @@
+{
+  "ignores": [
+    " @eslint/eslintrc",
+    "@vitest/coverage-v8",
+    "identity-obj-proxy",
+    "jest-environment-jsdom",
+    "jest-transform-stub",
+    "ts-node",
+    "vite-tsconfig-paths",
+    "tailwindcss",
+    "prettier",
+    "prettier-plugin-tailwindcss"
+  ],
+  "skip-missing": true
+}
