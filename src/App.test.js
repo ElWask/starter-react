@@ -4,10 +4,6 @@ import App from './App';
 
 describe('App', () => {
   beforeAll(() => {
-    fetchMock.enableMocks();
-  });
-
-  afterEach(() => {
     fetchMock.resetMocks();
   });
 
