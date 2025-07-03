@@ -6,10 +6,9 @@ describe("App", () => {
   test("should render title", () => {
     render(<App />);
 
-    const heading = screen.getByRole("heading", {
+    expect(screen.getByRole("heading", {
       name: "Market Data",
-    });
-    expect(heading).toBeInTheDocument();
+    })).toBeInTheDocument();
   });
 
   // TODO: Add more tests as you implement the Table component integration
